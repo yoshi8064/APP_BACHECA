@@ -1,7 +1,8 @@
-import tornado.web
+import tornado.web      #   librerie di tornado
 import tornado.escape
-import bcrypt
-from backend.db import users
+
+import bcrypt           #   libreria di criptazione
+from database import users    #   importa la collezione utenti dal file database
 
 #   handler iniziale
 class BaseHandler(tornado.web.RequestHandler):
