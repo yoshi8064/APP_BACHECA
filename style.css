@@ -1,0 +1,183 @@
+/* ============================
+   RESET
+=============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================
+   BODY
+=============================*/
+body {
+    background: #eef1f6;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* ============================
+   CONTAINER
+=============================*/
+.container {
+    width: 360px;
+    background: white;
+    padding: 25px 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+/* ============================
+   TITOLI
+=============================*/
+h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+/* ============================
+   INPUT E BUTTON
+=============================*/
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 11px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0056d2;
+}
+
+/* Logout */
+.logout {
+    background: #dc3545 !important;
+}
+.logout:hover {
+    background: #b52b36 !important;
+}
+
+/* ============================
+   LISTA TASKS
+=============================*/
+ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+li.done {
+    background: #d7ffd7;
+    text-decoration: line-through;
+    color: #2e7d32;
+}
+
+/* ============================
+   CONTENITORE ICONE
+=============================*/
+li div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+/* Icon buttons */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.icon-btn i {
+    pointer-events: none;
+}
+
+.icon-btn:hover {
+    opacity: 0.7;
+}
+
+/* ============================
+   LINK
+=============================*/
+.link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+li div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+/* Colore icone task */
+.icon-btn i {
+    color: #333 !important;     /* colore scuro ben visibile */
+    font-size: 18px;
+}
+
+/* Se una task è completata, l'icona ✓ diventa verde */
+li.done .icon-btn i.fa-check {
+    color: #28a745 !important;
+}
+
+/* Icona elimina sempre rossa */
+.icon-btn i.fa-trash {
+    color: #dc3545 !important;
+}
+
+/* Icona ripristino (↺) arancione */
+.icon-btn i.fa-rotate-left {
+    color: #ff9800 !important;
+}
