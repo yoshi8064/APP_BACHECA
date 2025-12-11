@@ -3,8 +3,8 @@ from bson import ObjectId
 from backend.db import tasks
 from backend.db import users
 from backend.handlers.auth import BaseHandler
-import time
 import datetime
+
 
 class TasksHandler(BaseHandler):
     async def get(self):
@@ -15,15 +15,13 @@ class TasksHandler(BaseHandler):
         cursor = tasks.find()
         out = []
         async for t in cursor:
-            usr_mail = tasks.find_one({"_id":ObjectId(t["_id"])})
-            usr_mail = usr_mail["email"]
             out.append({
                 "id": str(t["_id"]),
-                "text": f"{  str(datetime.datetime.now())  }\n{usr_mail}\n{  t['text']  }",
+                "text": f"{str(datetime.datetime.now())}\n{user["email"]}\n{t['text']}",
                 "done": t["done"],
             })
             print(datetime.datetime.now(), user)
-            
+
         return self.write_json({"items": out})
 
     async def post(self):
